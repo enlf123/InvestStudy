@@ -9,6 +9,10 @@ Environment
 
 
 1. Setup
+(0) Etc
+   VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
+   
+   
 (1) Installing Nvidia Driver for CUDA on WSL
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
   - 설치 확인
