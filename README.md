@@ -12,6 +12,10 @@ Environment
 (0) Etc
    VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
    
+    - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
+    > export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+    > 
+    > export LIBGL_ALWAYS_INDIRECT=1
    
 (1) Installing Nvidia Driver for CUDA on WSL
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
