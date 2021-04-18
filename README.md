@@ -27,6 +27,9 @@ Environment
     > sudo apt-get update
     > sudo apt-get install -y cuda-toolkit-11-3
    
-(3) Installing Docker 
+(3) Installing Docker & Nvidia Container Toolkint
   > curl https://get.docker.com | sh
-  >
+  > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+  > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+  > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+  > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
