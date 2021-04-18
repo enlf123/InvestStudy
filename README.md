@@ -23,9 +23,9 @@ Environment
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
   - CUDA repository 설정
     > $ sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-    $ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
-    $ sudo apt-get update
-    $ sudo apt-get install -y cuda-toolkit-11-3
+    >     $ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+    >     $ sudo apt-get update
+    >     $ sudo apt-get install -y cuda-toolkit-11-3
    
 (3) Installing Docker & Nvidia Container Toolkint
   > curl https://get.docker.com | sh
