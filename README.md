@@ -15,7 +15,11 @@ Environment
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
   - 설치 확인
     > (U.T.) nvidia-smi.exe
-  ![image](https://user-images.githubusercontent.com/33775481/115145492-ba83d680-a08c-11eb-9857-539a0bf11e89.png)
+    
+
+![image](https://user-images.githubusercontent.com/33775481/115145964-7219e800-a08f-11eb-8160-9827d7b40b57.png)
+  
+  
  드라이버 버전 : 470.14  CUDA ver : 11.3
  
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
