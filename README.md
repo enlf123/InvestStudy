@@ -9,6 +9,7 @@ Environment
 
 
 1. Setup
+
 (0) Etc
    VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
    
