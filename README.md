@@ -94,19 +94,19 @@ Environment
    
    
 (??) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
-     > curl https://get.docker.com | sh
-     > 
-     > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-     > 
-     > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-     > 
-     > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-     > 
-     > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
-     >
-     > sudo apt-get update
-     > 
-     > sudo apt-get install -y nvidia-docker2
-     > 
+      > curl https://get.docker.com | sh
+      > 
+      > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+      > 
+      > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+      > 
+      > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+      > 
+      > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
+      >
+      > sudo apt-get update
+      > 
+      > sudo apt-get install -y nvidia-docker2
+      > 
 
-
+asad
