@@ -18,24 +18,23 @@ Environment
 
 (0) Etc
    - VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
-   
-    - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
+   - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
     
     
 ```java
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 export LIBGL_ALWAYS_INDIRECT=1
 ```
-   - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 
 
-   - tensorflow : 현재 Cuda 11.0 Cudnn 8.0.5 기준으로 활용하기 때문에 developer 버전 
-   
+   - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 참조
    
    
 (1) Installing Nvidia Driver for CUDA on WSL
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
   - 설치 확인
-	> nvidia-smi.exe
+```java
+nvidia-smi.exe
+'''
     
 
 ![image](https://user-images.githubusercontent.com/33775481/115145964-7219e800-a08f-11eb-8160-9827d7b40b57.png)
