@@ -53,7 +53,7 @@ Environment
 
 ![image](https://user-images.githubusercontent.com/33775481/116100630-129f8600-a6e8-11eb-9932-fed350009818.png)
 
-     cuda Ver : 11.0
+  cuda Ver : 11.0
 
 (3) Installing Cudnn 
    
@@ -79,7 +79,7 @@ Environment
      ![image](https://user-images.githubusercontent.com/33775481/116100178-a7ee4a80-a6e7-11eb-9199-b810d12c3527.png)
 
      
-    - bashrc 파일 맨아래 아래의 경로 추가 필요
+   - bashrc 파일 맨아래 아래의 경로 추가 필요
      
      >export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
      >
