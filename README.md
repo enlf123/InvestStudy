@@ -17,16 +17,15 @@ Environment
 
 
 (0) Etc
-   - VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
-   - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
+- VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
+- 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
     
     
 ```java
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 export LIBGL_ALWAYS_INDIRECT=1
 ```
-
-   - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 참조
+- miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 참조
    
    
 (1) Installing Nvidia Driver for CUDA on WSL
@@ -34,55 +33,47 @@ export LIBGL_ALWAYS_INDIRECT=1
   - 설치 확인
 ```java
 nvidia-smi.exe
-'''
+```
     
-
 ![image](https://user-images.githubusercontent.com/33775481/115145964-7219e800-a08f-11eb-8160-9827d7b40b57.png)
-  
-  
- Drvier Ver : 470.14 
+   
+- Drvier Ver : 470.14 
  
  
  
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
-  - CUDA repository 설정
-  
-    	> sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-    	> 
-    	> sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
-    	>     
-    	> sudo apt-get update
-    	>     
-    	> sudo apt-get install -y cuda-toolkit-11-0
-		> 
-  
-  - Cuda 버전확인 명령어 (경로 확인 필요)
-  
-		> nvcc --version
+- CUDA repository 설정
+```java  
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+sudo apt-get update
+sudo apt-get install -y cuda-toolkit-11-0
+``` 
+- Cuda 버전확인 명령어 (경로 확인 필요)
+```java    
+nvcc --version
+```
 
 ![image](https://user-images.githubusercontent.com/33775481/116100630-129f8600-a6e8-11eb-9932-fed350009818.png)
 
-  cuda Ver : 11.0
+- cuda Ver : 11.0
 
 
 
 (3) Installing Cudnn 
    
-   - https://developer.nvidia.com/rdp/cudnn-archive
+- https://developer.nvidia.com/rdp/cudnn-archive
      
-   :Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
+:Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
      
-   (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
-     
-	> tar -xzvf cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8
-	> 
-	> sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
-	> 
-	> sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
-	> 
-	> sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
-
-     o 아래 명령어 수행시, CUDNN_MAJOR 8이 출력되면 정상 설치 완료 (cudnn Ver : 8.0)
+(file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
+```java      
+tar -xzvf cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8
+sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+``` 
+- 아래 명령어 수행시, CUDNN_MAJOR 8이 출력되면 정상 설치 완료 (cudnn Ver : 8.0)
      
 	>cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 	>
