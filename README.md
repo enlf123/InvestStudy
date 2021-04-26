@@ -35,7 +35,7 @@ Environment
 ![image](https://user-images.githubusercontent.com/33775481/115145964-7219e800-a08f-11eb-8160-9827d7b40b57.png)
   
   
- 드라이버 버전 : 470.14 
+ Drvier Ver : 470.14 
  
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
   - CUDA repository 설정
@@ -47,12 +47,20 @@ Environment
     >     
     > sudo apt-get install -y cuda-toolkit-11-0
     > 
+  
+  - Cuda 버전확인 명령어 (경로 확인 필요)
+    > nvcc --version
+
+![image](https://user-images.githubusercontent.com/33775481/116100630-129f8600-a6e8-11eb-9932-fed350009818.png)
+
+     cuda Ver : 11.0
 
 (3) Installing Cudnn 
    
    - https://developer.nvidia.com/rdp/cudnn-archive
      
      o  Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
+     
      (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
      
      > tar -xzvf cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8
@@ -63,23 +71,41 @@ Environment
      > 
      > sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 
+     o 아래 명령어 수행시, CUDNN_MAJOR 8이 출력되면 정상 설치 완료 (cudnn Ver : 8.0)
      
+     >cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+     >
+
+     ![image](https://user-images.githubusercontent.com/33775481/116100178-a7ee4a80-a6e7-11eb-9199-b810d12c3527.png)
+
      
+    - bashrc 파일 맨아래 아래의 경로 추가 필요
+     
+     >export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+     >
+     >export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
+     >
+     
+
+
+ (4) Installing tensorflow      
+ 
+ 
    
-(4) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
-  > curl https://get.docker.com | sh
-  > 
-  > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-  > 
-  > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-  > 
-  > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-  > 
-  > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
-  >
-  > sudo apt-get update
-  > 
-  > sudo apt-get install -y nvidia-docker2
-  > 
+(??) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
+    > curl https://get.docker.com | sh
+    > 
+    > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+    > 
+    > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+    > 
+    > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+    > 
+    > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
+    >
+    > sudo apt-get update
+    > 
+    > sudo apt-get install -y nvidia-docker2
+    > 
 
 
