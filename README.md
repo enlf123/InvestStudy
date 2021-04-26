@@ -1,5 +1,5 @@
-# InvestStudy
-2021-04-07
+# InvestStudy (Started: 2021-04-07)
+
 
 Environment 
  - WSL2 based windows 10
@@ -115,8 +115,9 @@ Environment
       
       > sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
   
-  
+  ![image](https://user-images.githubusercontent.com/33775481/116102785-f3a1f380-a6e9-11eb-8607-6eec95333b0f.png)
 
+ 
   
  (?) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
      
