@@ -27,7 +27,7 @@ export LIBGL_ALWAYS_INDIRECT=1
 ```
 - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 참조
    
-   
+ --------------------------------------------------------------------------  
 (1) Installing Nvidia Driver for CUDA on WSL
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
   - 설치 확인
