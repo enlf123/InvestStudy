@@ -97,7 +97,7 @@ pip install tf-nightly
   
 (4-1) GPU 활용 Tensorflow 사용가능 여부 Test
 ```java       
-import  tensorflow  as  tf 
+import tensorflow as tf 
 from tensorflow.python.client import device_lib
 device_lib.list_local_devices() 
 ```
