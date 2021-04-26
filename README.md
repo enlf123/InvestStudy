@@ -89,23 +89,28 @@ Environment
 
 
  (4) Installing tensorflow      
- 
+    
+   - 설치 가능한 Tensorflow 버전 확인 (https://www.tensorflow.org/install/source_windows#tested_build_configurations)
+   - 
+   - 현재는 최신 업데이트 버전 tf-nightly-gpu 설치 예정
+   
+      > pip install tf-nightly
  
    
    
  (?) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
      
-      > curl https://get.docker.com | sh
-      > 
-      > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-      > 
-      > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-      > 
-      > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-      > 
-      > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
-      >
-      > sudo apt-get update
-      > 
-      > sudo apt-get install -y nvidia-docker2
-      > 
+    > curl https://get.docker.com | sh
+    > 
+    > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+    > 
+    > curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+    > 
+    > curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+    > 
+    > curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
+    >
+    > sudo apt-get update
+    > 
+    > sudo apt-get install -y nvidia-docker2
+    > 
