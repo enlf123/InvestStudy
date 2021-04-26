@@ -99,12 +99,12 @@ Environment
   
   (4-1) GPU 활용 Tensorflow 사용가능 여부 Test
      
-     > import tensorflow as tf 
-     > 
-     > from tensorflow.python.client import device_lib
-     > 
-     > device_lib.list_local_devices() 
-     > 
+   > import tensorflow as tf 
+   > 
+   > from tensorflow.python.client import device_lib
+   > 
+   > device_lib.list_local_devices() 
+   > 
    
 
   - ibcusolver.so.10 에러 발생 (GPU Skip 했기에 아래와 같이 CPU만 인식됨)
