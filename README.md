@@ -93,7 +93,7 @@ Environment
  
    
    
-(??) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
+ (5) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
       > curl https://get.docker.com | sh
       > 
       > distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -108,5 +108,3 @@ Environment
       > 
       > sudo apt-get install -y nvidia-docker2
       > 
-
-asad
