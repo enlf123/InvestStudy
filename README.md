@@ -52,7 +52,9 @@ Environment
    
    - https://developer.nvidia.com/rdp/cudnn-archive
      
-     Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
+     Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
+
+     (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
      
      
      
