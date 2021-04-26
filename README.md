@@ -45,17 +45,19 @@ Environment
  
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
   - CUDA repository 설정
-    > sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
-    > 
-    > sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
-    >     
-    > sudo apt-get update
-    >     
-    > sudo apt-get install -y cuda-toolkit-11-0
-	> 
+  
+    	> sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+    	> 
+    	> sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+    	>     
+    	> sudo apt-get update
+    	>     
+    	> sudo apt-get install -y cuda-toolkit-11-0
+		> 
   
   - Cuda 버전확인 명령어 (경로 확인 필요)
-	> nvcc --version
+  
+		> nvcc --version
 
 ![image](https://user-images.githubusercontent.com/33775481/116100630-129f8600-a6e8-11eb-9932-fed350009818.png)
 
@@ -67,9 +69,9 @@ Environment
    
    - https://developer.nvidia.com/rdp/cudnn-archive
      
-     o  Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
+   :Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
      
-     (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
+   (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
      
 	> tar -xzvf cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8
 	> 
@@ -121,7 +123,7 @@ Environment
 
   - 해결 방법
       
-      > sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
+      	> sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
   
   ![image](https://user-images.githubusercontent.com/33775481/116102785-f3a1f380-a6e9-11eb-8607-6eec95333b0f.png)
 
