@@ -91,13 +91,33 @@ Environment
  (4) Installing tensorflow      
     
    - 설치 가능한 Tensorflow 버전 확인 (https://www.tensorflow.org/install/source_windows#tested_build_configurations)
-   - 
    - 현재는 최신 업데이트 버전 tf-nightly-gpu 설치 예정
    
       > pip install tf-nightly
  
+   - 현재 설치 버전 : tf-nightly 2.6.0.dev20210426 (tf-nightly 버전 확인 : https://pypi.org/project/tf-nightly/)
+  
+  (4-1) GPU 활용 Tensorflow 사용가능 여부 Test
+     
+     > import tensorflow as tf 
+     > 
+     > from tensorflow.python.client import device_lib
+     > 
+     > device_lib.list_local_devices() 
+     > 
    
-   
+
+  - ibcusolver.so.10 에러 발생 (GPU Skip 했기에 아래와 같이 CPU만 인식됨)
+  
+  ![image](https://user-images.githubusercontent.com/33775481/116102144-66f73580-a6e9-11eb-866b-1b40a6aa9c78.png)
+
+  - 해결 방법
+      
+      > sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
+  
+  
+
+  
  (?) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
      
     > curl https://get.docker.com | sh
