@@ -15,7 +15,7 @@ Environment
 1. Setup
 
 
-
+ --------------------------------------------------------------------------  
 (0) Etc
 - VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
 - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
@@ -40,7 +40,7 @@ nvidia-smi.exe
 - Drvier Ver : 470.14 
  
  
- 
+  --------------------------------------------------------------------------  
 (2) Installing CUDA Toolkit (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
 - CUDA repository 설정
 ```java  
@@ -56,16 +56,13 @@ nvcc --version
 
 ![image](https://user-images.githubusercontent.com/33775481/116100630-129f8600-a6e8-11eb-9932-fed350009818.png)
 
-- cuda Ver : 11.0
+- cuda Ver : 11.0 으로 확인
 
 
-
-(3) Installing Cudnn 
-   
+ --------------------------------------------------------------------------  
+(3) Installing Cudnn  
 - https://developer.nvidia.com/rdp/cudnn-archive
-     
 :Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
-     
 (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
 ```java      
 tar -xzvf cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8
@@ -89,7 +86,7 @@ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 	>
      
      
-
+ --------------------------------------------------------------------------  
 (4) Installing tensorflow      
     
    - 설치 가능한 Tensorflow 버전 확인 (https://www.tensorflow.org/install/source_windows#tested_build_configurations)
@@ -121,7 +118,7 @@ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 
  
   
-  
+ --------------------------------------------------------------------------    
 (?) Installing Docker & Nvidia Container Toolkint (Docker 활용 GPU 활용 현재 불가능, 추후 업데이트 필요)
      
     > curl https://get.docker.com | sh
