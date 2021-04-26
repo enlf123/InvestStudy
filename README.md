@@ -11,11 +11,10 @@ Environment
  - Cudnn 8.0.5
  - tensorflow 2.6.0
 
+--------------------------------------------------------------------------  
 
 1. Setup
 
-
- --------------------------------------------------------------------------  
 (0) Etc
 - VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
 - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
@@ -28,7 +27,7 @@ export LIBGL_ALWAYS_INDIRECT=1
 - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 참조
    
  --------------------------------------------------------------------------  
-(1) Installing Nvidia Driver for CUDA on WSL
+(1) Installing Nvidia Driver for CUDA on WSL (https://docs.nvidia.com/cuda/wsl-user-guide/index.html#running-cuda 참조)
   - 공식 홈페이지 이용 https://developer.nvidia.com/cuda/wsl/download
   - 설치 확인
 ```java
