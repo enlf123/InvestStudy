@@ -61,7 +61,9 @@ nvcc --version
 
  --------------------------------------------------------------------------  
 (3) Installing Cudnn  
+
 - https://developer.nvidia.com/rdp/cudnn-archive
+
 :Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 11.0 (cuDNN Library for Linux (x86_64)) 
 (file name : cudnn-11.0-linux-x64-v8.0.5.39.solitairetheme8)
 ```java      
@@ -71,50 +73,43 @@ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 ``` 
 - 아래 명령어 수행시, CUDNN_MAJOR 8이 출력되면 정상 설치 완료 (cudnn Ver : 8.0)
-     
-	>cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
-	>
+```java    
+cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
 
-     ![image](https://user-images.githubusercontent.com/33775481/116100178-a7ee4a80-a6e7-11eb-9199-b810d12c3527.png)
+![image](https://user-images.githubusercontent.com/33775481/116100178-a7ee4a80-a6e7-11eb-9199-b810d12c3527.png)
 
-     
-   - bashrc 파일 맨아래 아래의 경로 추가 필요
-     
-	>export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
-	>
-	>export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
-	>
-     
+- bashrc 파일 맨아래 아래의 경로 추가 필요
+```java        
+export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
+```     
      
  --------------------------------------------------------------------------  
 (4) Installing tensorflow      
     
-   - 설치 가능한 Tensorflow 버전 확인 (https://www.tensorflow.org/install/source_windows#tested_build_configurations)
-   - 현재는 최신 업데이트 버전 tf-nightly-gpu 설치 예정
-   
-	> pip install tf-nightly
- 
-   - 현재 설치 버전 : tf-nightly 2.6.0.dev20210426 (tf-nightly 버전 확인 : https://pypi.org/project/tf-nightly/)
+- 설치 가능한 Tensorflow 버전 확인 (https://www.tensorflow.org/install/source_windows#tested_build_configurations)
+- 현재는 최신 업데이트 버전 tf-nightly-gpu 설치 예정
+```java     
+pip install tf-nightly
+``` 
+- 현재 설치 버전 : tf-nightly 2.6.0.dev20210426 (tf-nightly 버전 확인 : https://pypi.org/project/tf-nightly/)
   
 (4-1) GPU 활용 Tensorflow 사용가능 여부 Test
-     
-	> import tensorflow as tf 
-	> 
-	> from tensorflow.python.client import device_lib
-	> 
-	> device_lib.list_local_devices() 
-	> 
-   
-
-  - ibcusolver.so.10 에러 발생 (GPU Skip 했기에 아래와 같이 CPU만 인식됨)
+```java       
+import tensorflow as tf 
+from tensorflow.python.client import device_lib
+device_lib.list_local_devices() 
+```
+- ibcusolver.so.10 에러 발생 (GPU Skip 했기에 아래와 같이 CPU만 인식됨)
   
-  ![image](https://user-images.githubusercontent.com/33775481/116102144-66f73580-a6e9-11eb-866b-1b40a6aa9c78.png)
+![image](https://user-images.githubusercontent.com/33775481/116102144-66f73580-a6e9-11eb-866b-1b40a6aa9c78.png)
 
-  - 해결 방법
-      
-      	> sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
-  
-  ![image](https://user-images.githubusercontent.com/33775481/116102785-f3a1f380-a6e9-11eb-8607-6eec95333b0f.png)
+- 해결 방법
+```java       
+sudo ln -s /usr/local/cuda-11.0/lib64/libcusolver.so.10 /usr/local/cuda-11.0/lib64/libcusolver.so.11
+```  
+![image](https://user-images.githubusercontent.com/33775481/116102785-f3a1f380-a6e9-11eb-8607-6eec95333b0f.png)
 
  
   
