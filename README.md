@@ -20,10 +20,12 @@ Environment
    - VxXsrv : https://sourceforge.net/projects/vcxsrv/ (GUI기반 프로그램 실행)
    
     - 설치 후  ~/.bashrc 맨 아래 아래 문장 두개를 추가 필요
-    ```java
-    export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
-	export LIBGL_ALWAYS_INDIRECT=1
-   	```
+    
+    
+```java
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+export LIBGL_ALWAYS_INDIRECT=1
+```
    - miniconda : https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html 
 
    - tensorflow : 현재 Cuda 11.0 Cudnn 8.0.5 기준으로 활용하기 때문에 developer 버전 
