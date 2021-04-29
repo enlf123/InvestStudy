@@ -1,4 +1,5 @@
 # Only for Window Environment 
+# Reference : https://github.com/quantylab/rltrader/
 import time
 import win32com.client
 import pandas as pd
